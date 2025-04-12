@@ -1,0 +1,39 @@
+{
+  "name": "zk-proof",
+  "version": "0.1.3",
+  "type": "module",
+  "description": "🧠 Kai-Turah Unified Harmonic Zero-Knowledge SDK — powered by Groth16, Poseidon, and Resonance Identity",
+  "license": "Apache-2.0",
+  "author": "BJ Klock",
+  "homepage": "https://github.com/phinetwork/keychain-full/zk-proof#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phinetwork/keychain-full/zk-proof.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phinetwork/keychain-full/zk-proof/issues"
+  },
+  "keywords": [
+    "zkp",
+    "zero-knowledge",
+    "zk-proof",
+    "kai-turah",
+    "phi-network",
+    "groth16",
+    "poseidon",
+    "wasm",
+    "resonance",
+    "identity",
+    "sdk",
+    "auth",
+    "verifier",
+    "prover",
+    "oracle"
+  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  }
+}

@@ -1,0 +1,41 @@
+[package]
+name = "zkp-prover"
+version = "0.1.0"
+edition = "2021"
+description = "🔐 WebAssembly ZK prover module for Kai-Turah Harmonic Identity using Groth16 and Poseidon"
+license = "Apache-2.0"
+repository = "https://github.com/phinetwork/zkp-prover"
+readme = "README.md"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# 🌐 WebAssembly bindings
+wasm-bindgen = "0.2"
+
+# 🧠 Arkworks ZK proof system
+ark-bls12-381 = "0.5.0"
+ark-ff = "0.5.0"
+ark-ec = "0.5.0"
+ark-std = "0.5.0"
+ark-serialize = "0.5.0"
+ark-groth16 = { version = "0.5.0", features = ["r1cs"] }
+ark-r1cs-std = "0.5.0"
+ark-relations = "0.5.0"
+ark-crypto-primitives = { version = "0.5.0", features = ["crh"] }
+
+# 🛡️ Secure randomness for WASM targets
+getrandom = { version = "0.2", features = ["js"] }
+hex = "0.4"
+base64 = "0.21"
+# 🧰 Error handling
+anyhow = "1.0"
+wasm-bindgen-futures = "0.4"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
